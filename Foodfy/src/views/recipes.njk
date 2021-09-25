@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block content %}        
+  
+  <section>
+    <div class="cards">
+      
+      {% for card in cards %}
+      
+        <div class="card" id="{{loop.index}}">
+          <div class="card__img-container">
+            <img src="{{card.image}}" alt="{{card.title}}">
+          </div>
+          <div class="card__content">
+            <p>{{card.title}}</p>
+          </div>
+          <div class="card__info">
+            <p>por {{card.author}}</p>
+          </div>
+        </div>
+
+      {% endfor %}
+      
+    </div>
+  </section>
+
+{% endblock content %}
+      
